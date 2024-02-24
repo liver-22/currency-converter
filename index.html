@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency converter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form class="form js-form">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Kalkulator walut</legend>
+        <p>
+          Poniżej znajduje się bardzo prosty kalkulator walut. <br />Podane
+          kursy są z dnia 18 lutego 2024.
+          <br />
+          <strong>Przed wysłaniem formularza uzupełnij wszystkie pola.</strong>
+        </p>
+        <p class="form__currencyParagraph">Wybierz walutę:</p>
+        <ul class="form__list">
+          <li class="form__listItem">
+            <label>
+              <input
+                class="js-radioEur"
+                type="radio"
+                name="currency"
+                value="EUR"
+                checked
+              />EURO
+            </label>
+          </li>
+          <li class="form__listItem">
+            <label>
+              <input
+                class="js-radioUsd"
+                type="radio"
+                name="currency"
+                value="USD"
+              />USD
+            </label>
+          </li>
+          <li class="form__listItem">
+            <label>
+              <input
+                class="js-radioGbp"
+                type="radio"
+                name="currency"
+                value="GBP"
+              />GBP
+            </label>
+          </li>
+        </ul>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Aktualny kurs <span class="js-currencyText">EURO:</span>
+            </span>
+            <input
+              class="form__field js-currencyInput"
+              name="currencyRate"
+              readonly
+              value="1 EUR = 4.34 PLN"
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">Kwota w PLN:</span>
+            <input
+              placeholder="Wpisz kwotę w zł"
+              class="form__field js-inputPln"
+              type="number"
+              step="0.01"
+              min="0.01"
+              name="currencyPln"
+              required
+            />
+          </label>
+        </p>
+        <p>
+          <button class="form__button">Przelicz</button>
+        </p>
+        <p class="form__result">Wynik: <span class="js-result">b/d</span></p>
+      </fieldset>
+    </form>
+  </body>
+</html>
