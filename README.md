@@ -8,7 +8,7 @@ On the website is a simple currency converter in polish language.
 
 ### Description
 
-![Currency-converter](https://ibb.co/M6bRw0f)
+![Currency-converter](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjBpZnlkOHNmbXAzbHpmaHA3MW11MmFkaDdwdmU3Zm8yaDlmeGZocCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Jg4VYDW711VoPw2VhE/giphy.gif)
 
 There is a simple currency calculator, which can transform PLN (Polish Zloty) into 3 different currencies:
 
