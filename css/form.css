@@ -5,7 +5,7 @@
 .form__fieldset {
     padding: 15px;
     border-radius: 5px;
-    background-color: #2b2b2b;
+    background-color: rgb(43 43 43 / 97%);
 }
 
 .form__legend {
