@@ -6,40 +6,43 @@ const currencyInputElement = document.querySelector(".js-currencyInput");
 const formElement = document.querySelector(".js-form");
 const inputPlnElement = document.querySelector(".js-inputPln");
 const resultElement = document.querySelector(".js-result");
+const rateEUR = 4.34;
+const rateUSD = 4.02;
+const rateGBP = 5.07;
 
 radioEurElement.addEventListener("change", () => {
   if (radioEurElement.checked) {
     currencyTextElement.innerText = "EURO:";
-    currencyInputElement.value = "1 EUR = 4.34 PLN";
+    currencyInputElement.value = `1 EUR = ${rateEUR} PLN`;
   }
 });
 
 radioUsdElement.addEventListener("change", () => {
   if (radioUsdElement.checked) {
     currencyTextElement.innerText = "USD:";
-    currencyInputElement.value = "1 USD = 4.02 PLN";
+    currencyInputElement.value = `1 USD = ${rateUSD} PLN`;
   }
 });
 
 radioGbpElement.addEventListener("change", () => {
   if (radioGbpElement.checked) {
     currencyTextElement.innerText = "GBP:";
-    currencyInputElement.value = "1 GBP = 5.07 PLN";
+    currencyInputElement.value = `1 GBP = ${rateGBP} PLN`;
   }
 });
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
   if (radioEurElement.checked) {
-    resultElement.innerText = `${(inputPlnElement.value / 4.34).toFixed(
+    resultElement.innerText = `${(inputPlnElement.value / rateEUR).toFixed(
       2
     )} EUR`;
   } else if (radioUsdElement.checked) {
-    resultElement.innerText = `${(inputPlnElement.value / 4.02).toFixed(
+    resultElement.innerText = `${(inputPlnElement.value / rateUSD).toFixed(
       2
     )} USD`;
   } else if (radioGbpElement.checked) {
-    resultElement.innerText = `${(inputPlnElement.value / 5.07).toFixed(
+    resultElement.innerText = `${(inputPlnElement.value / rateGBP).toFixed(
       2
     )} GBP`;
   }
